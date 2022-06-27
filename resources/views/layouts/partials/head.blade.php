@@ -19,6 +19,8 @@
   <link rel="stylesheet" href="/template/css/vertical-layout-light/style.css">
   <!-- endinject -->
   <link rel="shortcut icon" href="/template/images/favicon.png" />
+  <!-- Scripts -->
+  <script src="{{ asset('js/app.js') }}" defer></script>
   <!-- elementos para agregar css adicional -->
   @yield('custom_css')
 </head>
