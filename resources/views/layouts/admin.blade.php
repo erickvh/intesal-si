@@ -13,6 +13,7 @@
         <div class="container-fluid page-body-wrapper">
             <!-- ASIDE -->
             @include('layouts.partials.aside')
+
             <div class="main-panel" id="app">
                 <div class=" content-wrapper">
                     @yield('content')
