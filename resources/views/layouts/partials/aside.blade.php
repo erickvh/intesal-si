@@ -6,7 +6,7 @@
                 <span class="menu-title">Dashboard</span>
             </a>
         </li>
-        {{-- <li class="nav-item">
+        <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
                 <i class="menu-icon mdi mdi-table"></i>
                 <span class="menu-title">Tables</span>
@@ -18,6 +18,6 @@
                             table</a></li>
                 </ul>
             </div>
-        </li> --}}
+        </li>
     </ul>
 </nav>

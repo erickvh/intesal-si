@@ -7,10 +7,10 @@
             </button>
         </div>
         <div>
-            <a class="navbar-brand brand-logo" href="index.html">
+            <a class="navbar-brand brand-logo">
                 <img src="/template/images/logo.svg" alt="logo" />
             </a>
-            <a class="navbar-brand brand-logo-mini" href="index.html">
+            <a class="navbar-brand brand-logo-mini">
                 <img src="/template/images/logo-mini.svg" alt="logo" />
             </a>
         </div>
@@ -63,8 +63,25 @@
                     </a>
                 </div>
             </li> --}}
-            <li class="nav-item dropdown d-none d-lg-block user-dropdown">
-                <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+            <li class="nav-item">
+                <a class="dropdown-item" style="text-decoration: none; outline: none;">
+                    <img class="img-xs rounded-circle" src="/template/images/faces/face8.jpg" alt="Profile image">&nbsp;
+                    My Profile
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="dropdown-item" href="{{ route('logout') }}"
+                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
+                    style="text-decoration: none; outline: none;">
+                    <i class="dropdown-item-icon mdi mdi-power text-primary me-2 "></i>
+                    Sign Out
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
+            </li>
+            {{-- <li class="nav-item dropdown d-none d-lg-block user-dropdown">
+                <a class="nav-link" id="UserDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                     <img class="img-xs rounded-circle" src="/template/images/faces/face8.jpg" alt="Profile image"> </a>
                 <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                     <div class="dropdown-header text-center">
@@ -83,7 +100,7 @@
                         @csrf
                     </form>
                 </div>
-            </li>
+            </li> --}}
         </ul>
         <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
             data-bs-toggle="offcanvas">

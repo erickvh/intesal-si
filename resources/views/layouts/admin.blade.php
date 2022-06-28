@@ -14,8 +14,8 @@
             <!-- ASIDE -->
             @include('layouts.partials.aside')
 
-            <div class="main-panel" id="app">
-                <div class=" content-wrapper">
+            <div class="main-panel">
+                <div class=" content-wrapper" id="app">
                     @yield('content')
                 </div>
                 @include('layouts.partials.footer')
