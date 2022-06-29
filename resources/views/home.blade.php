@@ -4,6 +4,14 @@
 Home
 @endsection
 
+@section('title_content')
+Home
+@endsection
+
+@section('subtitle_content')
+Home
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
