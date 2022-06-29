@@ -5,10 +5,7 @@
         <div>
             <p class="app-sidebar__user-name"> {{ Auth::user()->name }}</p>
             <p class="app-sidebar__user-designation" style="margin-top: 0.5em">
-                <a href="#" style="text-decoration: none; color: white; ">
-                    <i class="fa fa-user-circle-o fa-fw" aria-hidden="true"></i>
-                    Profile
-                </a>
+                Super Admin
             </p>
         </div>
     </div>
@@ -19,7 +16,7 @@
                 <span class="app-menu__label">Home</span>
             </a>
         </li>
-        <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i
+        {{-- <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i
                     class="app-menu__icon fa fa-archive"></i><span class="app-menu__label">PRUEBA
                 </span><i class="treeview-indicator fa fa-angle-right"></i></a>
             <ul class="treeview-menu">
@@ -34,9 +31,7 @@
                     </a>
                 </li>
             </ul>
-        </li>
-
-
+        </li> --}}
 
     </ul>
 </aside>
