@@ -1,33 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>@yield('main-title')</title>
-    <!-- plugins:css -->
-    <link rel="stylesheet" href="/template/vendors/feather/feather.css">
-    <link rel="stylesheet" href="/template//vendors/mdi/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="/template//vendors/ti-icons/css/themify-icons.css">
-    <link rel="stylesheet" href="/template/vendors/typicons/typicons.css">
-    <link rel="stylesheet" href="/template/vendors/simple-line-icons/css/simple-line-icons.css">
-    <link rel="stylesheet" href="/template/vendors/css/vendor.bundle.base.css">
-    <link rel="stylesheet" href="/template/css/vertical-layout-light/style.css">
-    <link rel="shortcut icon" href="/template/images/favicon.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Main CSS-->
+    <link rel="stylesheet" type="text/css" href="/template/css/main.css">
+    <!-- Font-icon css-->
+    <link rel="stylesheet" type="text/css"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Inicio de Sesión Intesal</title>
 </head>
 
 <body>
-    <div class="container-scroller">
+    <section class="material-half-bg">
+        <div class="cover"></div>
+    </section>
+    <section class="login-content">
         @yield('content')
-    </div>
-    <script src="/template/vendors/js/vendor.bundle.base.js"></script>
-    <script src="/template/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
-    <script src="/template/js/off-canvas.js"></script>
-    <script src="/template/js/hoverable-collapse.js"></script>
-    <script src="/template/js/template.js"></script>
-    <script src="/template/js/settings.js"></script>
-    <script src="/template/js/todolist.js"></script>
+    </section>
+    <!-- Essential javascripts for application to work-->
+    <script src="/template/js/jquery-3.3.1.min.js"></script>
+    <script src="/template/js/popper.min.js"></script>
+    <script src="/template/js/bootstrap.min.js"></script>
+    <script src="/template/js/main.js"></script>
+    <!-- The javascript plugin to display page loading on top-->
+    <script src="/template/js/plugins/pace.min.js"></script>
+    <script type="text/javascript">
+        // Login Page Flipbox control
+      $('.login-content [data-toggle="flip"]').click(function() {
+      	$('.login-box').toggleClass('flipped');
+      	return false;
+      });
+    </script>
 </body>
 
 </html>
