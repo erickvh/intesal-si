@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!--Head-->
 @include('layouts.partials.head')
 
-<body>
-    <!-- CONTAINER principal -->
-    <div class="container-scroller">
-        <!-- MENU -->
-        @include('layouts.partials.menu')
-        <!-- partial -->
-        <div class="container-fluid page-body-wrapper">
-            <!-- ASIDE -->
-            @include('layouts.partials.aside')
-
-            <div class="main-panel">
-                <div class=" content-wrapper" id="app">
-                    @yield('content')
-                </div>
-                @include('layouts.partials.footer')
-
+<body class="app sidebar-mini">
+    <!--Navbar-->
+    @include('layouts.partials.menu')
+    <!-- Sidebar -->
+    @include('layouts.partials.aside')
+    <!-- Sidebar menu-->
+    <main class="app-content" id="app">
+        <div class="app-title">
+            <div>
+                <h1> @yield('title_content')</h1>
+                <p> @yield('subtitle_content')</p>
             </div>
+            <ul class="app-breadcrumb breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ route('home') }}"><i class="fa fa-home fa-lg fa-fw"></i></a>
+                </li>
+                @yield('breadcrumb')
+            </ul>
         </div>
-    </div>
-    <!-- Scripts js -->
+        @yield('content')
+    </main>
     @include('layouts.partials.scripts-page')
 </body>
 

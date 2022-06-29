@@ -1,23 +1,42 @@
-<nav class="sidebar sidebar-offcanvas" id="sidebar">
-    <ul class="nav">
-        <li class="nav-item">
-            <a class="nav-link" href="index.html">
-                <i class="mdi mdi-grid-large menu-icon"></i>
-                <span class="menu-title">Dashboard</span>
+<div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+<aside class="app-sidebar">
+    <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="{{ asset('template/images/user.png') }}"
+            width="35px" alt="User Image">
+        <div>
+            <p class="app-sidebar__user-name"> {{ Auth::user()->name }}</p>
+            <p class="app-sidebar__user-designation" style="margin-top: 0.5em">
+                <a href="#" style="text-decoration: none; color: white; ">
+                    <i class="fa fa-user-circle-o fa-fw" aria-hidden="true"></i>
+                    Profile
+                </a>
+            </p>
+        </div>
+    </div>
+    <ul class="app-menu">
+        <li>
+            <a class="app-menu__item @if (Request::is('/')) {{ 'active' }} @endif" href="{{ route('home') }}"><i
+                    class="app-menu__icon fa fa-dashboard"></i>
+                <span class="app-menu__label">Home</span>
             </a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
-                <i class="menu-icon mdi mdi-table"></i>
-                <span class="menu-title">Tables</span>
-                <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="tables">
-                <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">Basic
-                            table</a></li>
-                </ul>
-            </div>
+        <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i
+                    class="app-menu__icon fa fa-archive"></i><span class="app-menu__label">PRUEBA
+                </span><i class="treeview-indicator fa fa-angle-right"></i></a>
+            <ul class="treeview-menu">
+                <li>
+                    <a class="treeview-item " href="#"><i class="app-menu__icon fa fa-product-hunt"></i>
+                        PRUEBA
+                    </a>
+                </li>
+                <li>
+                    <a class="treeview-item " href="#"><i class="app-menu__icon fa fa-product-hunt"></i>
+                        PRUEBA
+                    </a>
+                </li>
+            </ul>
         </li>
+
+
+
     </ul>
-</nav>
+</aside>

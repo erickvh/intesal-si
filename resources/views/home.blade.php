@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('main-title')
+@section('title_page')
 Home
 @endsection
 

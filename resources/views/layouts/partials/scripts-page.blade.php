@@ -1,23 +1,20 @@
-<!-- plugins:js -->
-<script src="/template/vendors/js/vendor.bundle.base.js"></script>
-<!-- endinject -->
-<!-- Plugin js for this page -->
-{{-- <script src="/template/vendors/chart.js/Chart.min.js"></script> --}}
-<script src="/template/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
-<script src="/template/vendors/progressbar.js/progressbar.min.js"></script>
-
-<!-- End plugin js for this page -->
-<!-- inject:js -->
-<script src="/template/js/off-canvas.js"></script>
-<script src="/template/js/hoverable-collapse.js"></script>
-<script src="/template/js/template.js"></script>
-<script src="/template/js/settings.js"></script>
-<script src="/template/js/todolist.js"></script>
-<!-- endinject -->
-<!-- Custom js for this page-->
-<script src="/template/js/jquery.cookie.js" type="text/javascript"></script>
-<script src="/template/js/dashboard.js"></script>
-{{-- <script src="/template/js/Chart.roundedBarCharts.js"></script> --}}
-<!-- elemento para agregar javascript nuevo o custom -->
+<!-- Essential javascripts for application to work-->
+<script src="/template/js/jquery-3.3.1.min.js"></script>
+<script src="/template/js/popper.min.js"></script>
+<script src="/template/js/bootstrap.min.js"></script>
+<script src="/template/js/main.js"></script>
+<!-- The javascript plugin to display page loading on top-->
+<script src="/template/js/plugins/pace.min.js"></script>
+<!-- Page specific javascripts-->
+<!-- Google analytics script-->
+<script type="text/javascript">
+    if(document.location.hostname == 'pratikborsadiya.in') {
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-72504830-1', 'auto');
+      ga('send', 'pageview');
+  }
+</script>
 @yield('custom_javascript')
-<!-- End custom js for this page-->

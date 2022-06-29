@@ -1,29 +1,26 @@
 <head>
-  <!-- Required meta tags -->
+  <meta name="description" content="Product Management Vetro">
+
+  <!-- Open Graph Meta-->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Product Management">
+  <meta property="og:title" content="Product Management">
+
+  <title>@yield('title_page')</title>
+
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>@yield('main-title')</title>
-  <!-- plugins:css -->
-  <link rel="stylesheet" href="/template/vendors/feather/feather.css">
-  <link rel="stylesheet" href="/template/vendors/mdi/css/materialdesignicons.min.css">
-  <link rel="stylesheet" href="/template/vendors/ti-icons/css/themify-icons.css">
-  <link rel="stylesheet" href="/template/vendors/typicons/typicons.css">
-  <link rel="stylesheet" href="/template/vendors/simple-line-icons/css/simple-line-icons.css">
-  <link rel="stylesheet" href="/template/vendors/css/vendor.bundle.base.css">
-  <!-- endinject -->
-  <!-- Plugin css for this page -->
-  {{--
-  <link rel="stylesheet" href="/template/vendors/datatables.net-bs4/dataTables.bootstrap4.css"> --}}
-  <link rel="stylesheet" href="/template/js/select.dataTables.min.css">
-  <!-- End plugin css for this page -->
-  <!-- inject:css -->
-  <link rel="stylesheet" href="/template/css/vertical-layout-light/style.css">
-  <!-- endinject -->
-  <link rel="shortcut icon" href="/template/images/favicon.png" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <!-- Scripts -->
   <script src="{{ asset('js/app.js') }}" defer></script>
-  <!-- elementos para agregar css adicional -->
+  <!-- Main CSS-->
+  <link rel="stylesheet" type="text/css" href="/template/css/main.css">
+  <!-- Font-icon css-->
+  <link rel="stylesheet" type="text/css"
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
   @yield('custom_css')
 </head>
