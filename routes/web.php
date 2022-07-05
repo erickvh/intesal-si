@@ -13,10 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// }) ;
 
 Auth::routes();
+
+// bloqueando la ruta de registro de usuarios
+Auth::routes(["register" => false]);
+// redireccionando todas las rutas de / a home
+Route::get('/', function () {
+    return redirect('/home');
+})->middleware('auth');
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
