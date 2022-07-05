@@ -47,6 +47,9 @@ class RouteServiceProvider extends ServiceProvider
                 ->namespace($this->namespace)
                 ->group(base_path('routes/web.php'));
         });
+
+        // RUTAS DEFINIDAS PARA EL DESARROLLO
+        $this->mapeoRutas();
     }
 
     /**
@@ -59,5 +62,13 @@ class RouteServiceProvider extends ServiceProvider
         RateLimiter::for('api', function (Request $request) {
             return Limit::perMinute(60)->by(optional($request->user())->id ?: $request->ip());
         });
+    }
+
+    protected function mapeoRutas()
+	{
+        // EJEMPLO PARA DECLARAR UN SECCIÓN DE RUTAS
+        // Route::middleware('web')
+		// 	->namespace($this->namespace)
+		// 	->group(base_path('routes/rutas/ejemplo.php'));
     }
 }
