@@ -17,14 +17,14 @@ class UsuarioController extends Controller
     public function index()
     {
         $permissions = Permission::all();
-        return view('users.index', compact('permissions'));
+        return view('usuarios.index', compact('permissions'));
     }
 
     // Función para mostrar todos los usuarios registrados menos el super admin
 	public function listar(Request $request)
 	{
 		$id = Auth::user()->id;
-		$users = User::orderby('id', 'DESC')
+		$usuarios= User::orderby('id', 'DESC')
 			->with('permissions', 'roles')
 			// ->whereDoesntHave('roles', function ($query) {
             //      return $query->where('name', 'like', 'super-admin%');
@@ -33,19 +33,19 @@ class UsuarioController extends Controller
 			->paginate(5);
 
 
-		$permissions = Permission::all();
+		$permisos = Permission::all();
 
 		return [
 			'pagination' => [
-				'total'         => $users->total(),
-				'current_page'  => $users->currentPage(),
-				'per_page'      => $users->perPage(),
-				'last_page'     => $users->lastPage(),
-				'from'          => $users->firstItem(),
-				'to'            => $users->lastItem(),
+				'total'         => $usuarios->total(),
+				'current_page'  => $usuarios->currentPage(),
+				'per_page'      => $usuarios->perPage(),
+				'last_page'     => $usuarios->lastPage(),
+				'from'          => $usuarios->firstItem(),
+				'to'            => $usuarios->lastItem(),
 			],
-			'users' => $users,
-			'permissions' => $permissions,
+			'usuarios' => $usuarios,
+			'permisos' => $permisos,
 
 		];
 	}
