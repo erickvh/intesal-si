@@ -6,7 +6,7 @@ Route::group(['prefix' => 'usuarios', 'middleware' => ['auth']], function () {
     // Ruta para visualizar el index 
     Route::get('/', 'Usuarios\UsuarioController@index')->name('usuarios.index');
     // Ruta para listar todos los usuarios 
-    Route::get('/list', 'Usuarios\UsuarioController@list')->name('usuarios.list');
+    Route::get('/listar', 'Usuarios\UsuarioController@listar')->name('usuarios.list');
     // Ruta para realizar el post y guardar un nuevo usuario
     Route::post('/store', 'Usuarios\UsuarioController@store')->name('usuarios.store');
     // Ruta pora mostrar un usuario por medio de su id

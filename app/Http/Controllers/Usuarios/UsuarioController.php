@@ -21,7 +21,7 @@ class UsuarioController extends Controller
     }
 
     // Función para mostrar todos los usuarios registrados menos el super admin
-	public function list(Request $request)
+	public function listar(Request $request)
 	{
 		$id = Auth::user()->id;
 		$users = User::orderby('id', 'DESC')
